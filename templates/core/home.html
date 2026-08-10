@@ -1,15 +1,76 @@
-{% extends "base.html" %}
+{% extends 'base.html' %}
+{% load static %}
 
 {% block title %}
-Home | Yeti Autohuolto
+Yeti Autohuolto | Professional Auto Service
 {% endblock %}
+
+
+
 
 {% block content %}
 
-<div class="container py-5">
+<section class="hero-section">
 
-    <h1>Homepage</h1>
+    <div class="container">
 
-</div>
+        <div class="row align-items-center hero-row">
+
+            <div class="col-lg-6">
+
+                <span class="hero-badge">
+                    Reliable Auto Repair & Maintenance
+                </span>
+
+                <h1 class="hero-title">
+                    Professional Vehicle Service
+                    for Every Journey
+                </h1>
+
+                <p class="hero-description">
+                    From routine maintenance and diagnostics to repairs,
+                    we provide dependable automotive care with transparent
+                    pricing and attention to detail.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#" class="btn btn-primary">
+                        Book Service
+                    </a>
+
+                    <a href="#" class="btn btn-outline-dark">
+                        Call Us
+                    </a>
+
+                </div>
+
+                <div class="hero-features">
+
+                    <span>✓ Transparent Pricing</span>
+                    <span>✓ Fast Service</span>
+                    <span>✓ Professional Technicians</span>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-6">
+                <div class="hero-image-container">
+
+                <img
+                    src="{% static 'images/hero/garage.jpg' %}"
+                    class="img-fluid hero-image"
+                    alt="Garage">
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
 
 {% endblock %}
