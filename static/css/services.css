@@ -85,3 +85,50 @@
     text-decoration:underline;
 
 }
+
+/* ===========================
+   SERVICES HERO
+=========================== */
+
+.services-hero{
+    padding:100px 0 70px;
+    background:#ffffff;
+}
+
+.section-tag{
+
+    display:inline-block;
+
+    color:#ff6b00;
+
+    font-size:.9rem;
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+}
+
+.services-hero h1{
+
+    color:#1d2433;
+
+    font-weight:800;
+
+    margin-top:15px;
+
+}
+
+.services-hero p{
+
+    max-width:700px;
+
+    margin:auto;
+
+    color:#667085;
+
+    line-height:1.8;
+
+}
