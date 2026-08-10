@@ -1,0 +1,41 @@
+.about-section{
+
+    padding:100px 0;
+
+}
+
+.about-image img{
+
+    border-radius:20px;
+
+    box-shadow:0 20px 45px rgba(0,0,0,.10);
+
+}
+
+.about-description{
+
+    color:#666;
+
+    line-height:1.9;
+
+    margin:25px 0;
+
+}
+
+.about-features{
+
+    display:grid;
+
+    gap:18px;
+
+    margin-top:30px;
+
+}
+
+.about-item{
+
+    font-size:17px;
+
+    font-weight:500;
+
+}

@@ -106,6 +106,98 @@
     transform:translateY(-8px);
 }
 
+/* ======================================
+   WHY CHOOSE US
+====================================== */
+
+.section-header{
+    margin-top:100px;
+    margin-bottom:70px;
+}
+
+.section-badge{
+    color:#ff6b00;
+    font-weight:600;
+    text-transform:uppercase;
+    letter-spacing:1px;
+}
+
+.section-title{
+    font-size:48px;
+    font-weight:700;
+    margin:15px 0;
+}
+
+.section-description{
+    max-width:700px;
+    margin:auto;
+    color:#6c757d;
+    font-size:18px;
+    line-height:1.8;
+}
+
+/* Feature Cards */
+
+.feature-card{
+
+    background:#ffffff;
+
+    padding:35px 28px;
+
+    border-radius:18px;
+
+    transition:0.35s ease;
+
+    height:100%;
+
+    border:1px solid #ececec;
+
+}
+
+.feature-icon{
+
+    font-size:42px;
+
+    margin-bottom:18px;
+
+}
+
+.feature-card h4{
+
+    font-weight:700;
+
+    margin-bottom:18px;
+
+}
+
+.feature-card p{
+
+    color:#6c757d;
+
+    line-height:1.8;
+
+}
+
+/* Hover */
+
+.feature-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 20px 45px rgba(0,0,0,.08);
+
+    border-color:#ff6b00;
+
+}
+
+.feature-card:hover .feature-icon{
+
+    transform:scale(1.15);
+
+    transition:.3s;
+
+}
+
 
 /* ===========================
    TABLET
