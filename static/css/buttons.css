@@ -1,4 +1,4 @@
-.btn{
+/* .btn{
 
 transition:.35s;
 }
@@ -9,4 +9,28 @@ transform:translateY(-3px);
 
 box-shadow:0 15px 35px rgba(0,0,0,.15);
 
+}
+ */
+
+
+ .btn{
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:translateY(-2px);
+}
+
+.btn-primary-custom{
+    background:#F97316;
+    color:#fff;
+    border:none;
+    border-radius:10px;
+    padding:12px 28px;
+    font-weight:600;
+}
+
+.btn-primary-custom:hover{
+    background:#ea670c;
+    color:#fff;
 }

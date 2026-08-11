@@ -85,3 +85,341 @@
     text-decoration:underline;
 
 }
+
+/* ===========================
+   SERVICES HERO
+=========================== */
+
+.services-hero{
+    padding:100px 0 70px;
+    background:#ffffff;
+}
+
+.section-tag{
+
+    display:inline-block;
+
+    color:#ff6b00;
+
+    font-size:.9rem;
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+}
+
+.services-hero h1{
+
+    color:#1d2433;
+
+    font-weight:800;
+
+    margin-top:15px;
+
+}
+
+.services-hero p{
+
+    max-width:700px;
+
+    margin:auto;
+
+    color:#667085;
+
+    line-height:1.8;
+
+}
+
+
+.service-card{
+    background:#fff;
+    border:1px solid #e9ecef;
+    border-radius:18px;
+    padding:2rem;
+    transition:.3s ease;
+    box-shadow:0 5px 20px rgba(0,0,0,.04);
+}
+
+.service-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 20px 40px rgba(0,0,0,.10);
+    border-color:#ff6b00;
+}
+
+.service-icon{
+    width:70px;
+    height:70px;
+    border-radius:16px;
+    background:#fff5ef;
+    color:#ff6b00;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:2rem;
+    margin-bottom:1.5rem;
+}
+
+.service-card h4{
+    font-weight:700;
+    margin-bottom:1.25rem;
+}
+
+.service-features{
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+
+.service-features li{
+    display:flex;
+    align-items:flex-start;
+    gap:10px;
+    margin-bottom:14px;
+    color:#5b6472;
+    line-height:1.5;
+}
+
+.service-features i{
+    color:#ff6b00;
+    font-size:.95rem;
+    margin-top:4px;
+    flex-shrink:0;
+}
+
+
+/* ========================================
+   SERVICE PROCESS
+======================================== */
+
+.service-process{
+    padding:100px 0;
+    background:#f8f9fa;
+}
+
+.process-heading{
+    max-width:700px;
+    margin:0 auto 60px;
+}
+
+.process-item{
+    position:relative;
+    text-align:center;
+    padding:0 15px;
+}
+
+.process-circle{
+
+    width:64px;
+    height:64px;
+
+    margin:0 auto 25px;
+
+    border:2px solid #ff6b00;
+    border-radius:50%;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:1.25rem;
+    font-weight:700;
+
+    color:#ff6b00;
+    background:#fff;
+}
+
+.process-item h5{
+
+    font-weight:700;
+    color:#1d2433;
+
+    margin-bottom:15px;
+}
+
+.process-item p{
+
+    color:#6c757d;
+
+    font-size:.95rem;
+    line-height:1.7;
+
+    margin:0;
+}
+
+/* horizontal connector */
+
+@media (min-width:992px){
+
+.process-item::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:32px;
+    left:68%;
+
+    width:64%;
+
+    height:2px;
+
+    background:#e5e7eb;
+}
+
+.col-lg-3:last-child .process-item::after{
+
+    display:none;
+}
+
+}
+
+/* Mobile */
+
+@media (max-width:991px){
+
+.service-process{
+
+    padding:80px 0;
+}
+
+.process-item{
+
+    margin-bottom:20px;
+}
+
+.process-item::after{
+
+    display:none;
+}
+
+}
+
+
+/* ========================================
+   WHY CHOOSE US
+======================================== */
+
+.why-service{
+    background:#f8f9fa;
+}
+
+.why-card{
+    height:100%;
+    background:#fff;
+    border:1px solid #e9ecef;
+    border-radius:16px;
+    padding:30px;
+    transition:.3s ease;
+}
+
+.why-card:hover{
+    border-color:#ff6b00;
+    transform:translateY(-5px);
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.why-icon{
+    width:60px;
+    height:60px;
+    border-radius:14px;
+    background:#fff5ef;
+    color:#ff6b00;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:1.6rem;
+    margin-bottom:20px;
+}
+
+.why-card h5{
+    font-weight:700;
+    margin-bottom:15px;
+    color:#1d2433;
+}
+
+.why-card p{
+    margin:0;
+    color:#667085;
+    line-height:1.7;
+}
+
+@media (max-width:768px){
+
+    .why-card{
+        padding:25px;
+    }
+
+}
+
+/* ========================================
+   SERVICE CTA
+======================================== */
+
+.service-cta{
+    padding:90px 0;
+}
+
+.cta-box{
+    max-width:850px;
+    margin:0 auto;
+    padding:60px 40px;
+    background:#f8f9fa;
+    border:1px solid #e9ecef;
+    border-radius:18px;
+    text-align:center;
+}
+
+.cta-box h2{
+    font-size:2.2rem;
+    font-weight:700;
+    color:#1d2433;
+    margin-bottom:20px;
+}
+
+.cta-box p{
+    max-width:620px;
+    margin:0 auto 35px;
+    color:#667085;
+    line-height:1.8;
+}
+
+.cta-buttons{
+    display:flex;
+    justify-content:center;
+    gap:16px;
+    flex-wrap:wrap;
+}
+
+.cta-buttons .btn{
+    min-width:180px;
+    padding:12px 28px;
+    border-radius:10px;
+    font-weight:600;
+}
+
+@media (max-width:768px){
+
+    .service-cta{
+        padding:70px 0;
+    }
+
+    .cta-box{
+        padding:40px 25px;
+    }
+
+    .cta-box h2{
+        font-size:1.8rem;
+    }
+
+    .cta-buttons{
+        flex-direction:column;
+    }
+
+    .cta-buttons .btn{
+        width:100%;
+    }
+
+}
