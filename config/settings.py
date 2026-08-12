@@ -13,12 +13,16 @@ load_dotenv(BASE_DIR / ".env")
 # See https://docs.djangoproject.com/en/6.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-m!39#54eg=fvo35!d$*1^z)=f$!0z9m_pcixcyhv@!7$%)+!k9'
+SECRET_KEY = os.getenv("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.getenv("DEBUG") == "True"
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    "yetiautohuolto.fi",
+    "www.yetiautohuolto.fi",
+
+]
 
 
 # Application definition
@@ -114,6 +118,8 @@ STATICFILES_DIRS = [
     BASE_DIR / "static",
 ]
 
+STATIC_ROOT = BASE_DIR / "staticfiles"
+
 MEDIA_URL = "/media/"
 
 MEDIA_ROOT = BASE_DIR / "media"
@@ -148,23 +154,15 @@ GARAGE_OWNER_EMAIL = os.getenv("GARAGE_OWNER_EMAIL")
 
 
 
-# # ======================================
-# # Email Configuration
-# # ======================================
+# =====================================================
+# Production Security
+# =====================================================
 
-# EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+if not DEBUG:
+    CSRF_TRUSTED_ORIGINS = [
+        "https://yetiautohuolto.fi",
+        "https://www.yetiautohuolto.fi",
+    ]
 
-# EMAIL_HOST = os.getenv("EMAIL_HOST")
-
-# EMAIL_PORT =int(os.getenv("EMAIL_PORT"))
-
-# EMAIL_USE_SSL = os.getenv("EMAIL_USE_SSL") == "True"
-# EMAIL_USE_TLS = os.getenv("EMAIL_USE_TLS") == "True"
-
-# EMAIL_HOST_USER = os.getenv("EMAIL_HOST_USER")
-
-# EMAIL_HOST_PASSWORD = os.getenv("EMAIL_HOST_PASSWORD")
-
-# DEFAULT_FROM_EMAIL = os.getenv("DEFAULT_FROM_EMAIL")
-
-# GARAGE_OWNER_EMAIL = os.getenv("GARAGE_OWNER_EMAIL")
+    SESSION_COOKIE_SECURE = True
+    CSRF_COOKIE_SECURE = True
