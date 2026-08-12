@@ -8,7 +8,9 @@
 
                 <div class="booking-form-wrapper">
 
-                    <form>
+                    <form method="POST">
+
+                        {% csrf_token %}
 
                         <div class="row g-4">
 
@@ -28,8 +30,11 @@
 
                                     <input
                                         type="text"
+                                        name="full_name"
                                         class="form-control"
-                                        placeholder="John Smith">
+                                        placeholder="John Smith"
+                                        value="{{ form.full_name.value|default:'' }}">
+                                    
                                 </div>
 
                                 <div class="mb-3">
@@ -40,8 +45,10 @@
 
                                     <input
                                         type="tel"
+                                        name="phone_number"
                                         class="form-control"
-                                        placeholder="+358...">
+                                        placeholder="+358..."
+                                        value="{{ form.phone_number.value|default:'' }}">
                                 </div>
 
                                 <div>
@@ -51,8 +58,10 @@
 
                                     <input
                                         type="email"
+                                        name="email"
                                         class="form-control"
-                                        placeholder="name@email.com">
+                                        placeholder="name@email.com"
+                                        value="{{ form.email.value|default:'' }}">
                                 </div>
 
                             </div>
@@ -73,8 +82,10 @@
 
                                     <input
                                         type="text"
+                                        name="vehicle_make"
                                         class="form-control"
-                                        placeholder="Toyota">
+                                        placeholder="Toyota"
+                                        value="{{ form.vehicle_make.value|default:'' }}">
                                 </div>
 
                                 <div class="mb-3">
@@ -85,8 +96,10 @@
 
                                     <input
                                         type="text"
+                                        name="vehicle_model"
                                         class="form-control"
-                                        placeholder="Corolla">
+                                        placeholder="Corolla"
+                                        value="{{ form.vehicle_model.value|default:'' }}">
                                 </div>
 
                                 <div>
@@ -96,8 +109,10 @@
 
                                     <input
                                         type="text"
+                                        name="registration_number"
                                         class="form-control"
-                                        placeholder="ABC-123">
+                                        placeholder="ABC-123"
+                                        value="{{ form.registration_number.value|default:'' }}">
                                 </div>
 
                             </div>
@@ -125,31 +140,42 @@
                                 <span class="text-danger">*</span>
                             </label>
 
-                            <select class="form-select">
 
-                                <option selected disabled>
+
+                            <select
+                                name="service_required"
+                                class="form-select">
+
+                                <option value="">
                                     Select a service
+
                                 </option>
 
-                                <option>Oil Change</option>
+                                    {% for value, label in form.service_required.field.choices %}
 
-                                <option>Engine Diagnostics</option>
+                                        {% if value %}
 
-                                <option>Brake Service</option>
+                                            {% if form.service_required.value == value %}
+                                                <option value="{{ value }}" selected>
+                                                    {{ label }}
+                                                </option>
+                                            {% else %}
+                                                <option value="{{ value }}">
+                                                    {{ label }}
+                                                </option>
+                                            {% endif %}
 
-                                <option>Tire Service</option>
+                                        {% endif %}
 
-                                <option>Battery Service</option>
-
-                                <option>Air Conditioning</option>
-
-                                <option>Suspension & Steering</option>
-
-                                <option>General Maintenance</option>
-
-                                <option>Other</option>
+                                    {% endfor %}
 
                             </select>
+
+
+                            
+                                
+
+                       
 
                         </div>
 
@@ -160,9 +186,10 @@
                             </label>
 
                             <textarea
+                                name="problem_description"
                                 class="form-control"
                                 rows="5"
-                                placeholder="Describe the issue or service you need..."></textarea>
+                                placeholder="Describe the issue or service you need...">{{ form.problem_description.value|default:'' }}</textarea>
 
                         </div>
 
@@ -177,7 +204,9 @@
 
                                 <input
                                     type="date"
-                                    class="form-control">
+                                    name="preferred_date"
+                                    class="form-control"
+                                    value="{{ form.preferred_date.value|default:'' }}">
 
                             </div>
 
@@ -187,26 +216,35 @@
                                     Preferred Time
                                 </label>
 
-                                <select class="form-select">
+                                <select 
+                                    name="preferred_time"
+                                    class="form-select">
 
-                                    <option selected>
-                                        Morning (08:00 – 12:00)
+
+                                    {% for value, label in form.preferred_time.field.choices %}
+
+                                    <option
+                                        value="{{ value }}"
+                                        {% if form.preferred_time.value == value %}selected{% endif %}>
+
+                                        {{ label }}
+
                                     </option>
 
-                                    <option>
-                                        Afternoon (12:00 – 16:00)
-                                    </option>
+                                    {% endfor %}
 
-                                    <option>
-                                        No Preference
-                                    </option>
+                            
+
+                     
+                                    
 
                                 </select>
-
                             </div>
 
-                        </div>
 
+
+                   
+                        </div>
                         <div class="booking-note mt-5">
 
                             <i class="bi bi-info-circle"></i>

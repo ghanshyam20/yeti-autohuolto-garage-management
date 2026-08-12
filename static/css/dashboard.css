@@ -1,0 +1,217 @@
+body{
+
+    margin:0;
+
+    font-family:Arial,sans-serif;
+
+    background:#f4f7fb;
+
+}
+
+.login-wrapper{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:20px;
+
+}
+
+.login-card{
+
+    width:100%;
+
+    max-width:430px;
+
+    background:#fff;
+
+    border-radius:18px;
+
+    padding:40px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+
+}
+
+.logo{
+
+    text-align:center;
+
+    font-size:34px;
+
+    margin:0;
+
+    font-weight:700;
+
+}
+
+.logo span{
+
+    color:#ff6b00;
+
+}
+
+.subtitle{
+
+    text-align:center;
+
+    color:#666;
+
+    margin-top:10px;
+
+    margin-bottom:30px;
+
+}
+
+.form-control{
+
+    width:100%;
+
+    box-sizing:border-box;
+
+    padding:14px;
+
+    border:1px solid #ddd;
+
+    border-radius:10px;
+
+    margin-bottom:20px;
+
+    font-size:15px;
+
+}
+
+.password-wrapper{
+
+    display:flex;
+
+    align-items:center;
+
+    border:1px solid #ddd;
+
+    border-radius:10px;
+
+    margin-bottom:20px;
+
+    overflow:hidden;
+
+}
+
+.password-input{
+
+    flex:1;
+
+    border:none;
+
+    outline:none;
+
+    padding:14px;
+
+    font-size:15px;
+
+}
+
+.toggle-password{
+
+    width:55px;
+
+    height:100%;
+
+    border:none;
+
+    background:#fff;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+    color:#666;
+
+    transition:.2s;
+
+}
+
+.toggle-password:hover{
+
+    color:#ff6b00;
+
+}
+
+.btn-login{
+
+    width:100%;
+
+    padding:14px;
+
+    background:#ff6b00;
+
+    color:#fff;
+
+    border:none;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    transition:.2s;
+
+}
+
+.btn-login:hover{
+
+    background:#e55f00;
+
+}
+
+.footer-text{
+
+    margin-top:25px;
+
+    text-align:center;
+
+    color:#999;
+
+    font-size:13px;
+
+}
+
+.alert{
+
+    background:#ffe8e8;
+
+    color:#b10000;
+
+    border:1px solid #ffbcbc;
+
+    border-radius:8px;
+
+    padding:12px;
+
+    margin-bottom:20px;
+
+    text-align:center;
+
+}
+
+@media(max-width:480px){
+
+    .login-card{
+
+        padding:28px;
+
+    }
+
+    .logo{
+
+        font-size:28px;
+
+    }
+
+}
