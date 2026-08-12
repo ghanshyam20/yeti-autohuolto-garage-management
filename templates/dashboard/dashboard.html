@@ -1,0 +1,200 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard | Yeti Autohuolto</title>
+
+    <link rel="stylesheet"
+          href="{% static 'css/dashboard_home.css' %}">
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+        <div class="brand">
+
+            <span class="brand-dark">YETI</span>
+
+            <span class="brand-orange">AUTOHUOLTO</span>
+
+        </div>
+
+        <nav>
+
+            <a href="#" class="active">
+                Dashboard
+            </a>
+
+            <a href="#">
+                Bookings
+            </a>
+
+            <a href="#">
+                Calendar
+            </a>
+
+            <a href="#">
+                Customers
+            </a>
+
+            <a href="#">
+                Settings
+            </a>
+
+        </nav>
+
+    </aside>
+
+    <!-- Main -->
+
+    <main class="content">
+
+        <!-- Top Bar -->
+
+        <header class="topbar">
+
+            <h1>
+
+                Dashboard
+
+            </h1>
+
+            <div class="top-right">
+
+                Welcome, {{ request.user.username }}
+
+            </div>
+
+        </header>
+
+        <!-- Cards -->
+
+        <section class="cards">
+            <div class="stats-grid">
+
+    <div class="stat-card">
+        <h2>{{ total_bookings }}</h2>
+        <p>Total Bookings</p>
+    </div>
+
+    <div class="stat-card">
+        <h2>{{ pending_bookings }}</h2>
+        <p>Pending</p>
+    </div>
+
+    <div class="stat-card">
+        <h2>{{ confirmed_bookings }}</h2>
+        <p>Confirmed</p>
+    </div>
+
+    <div class="stat-card">
+        <h2>{{ completed_bookings }}</h2>
+        <p>Completed</p>
+    </div>
+
+</div>
+
+
+        </section>
+
+        <!-- Recent Bookings -->
+
+        <section class="recent">
+
+           <div class="table-card">
+            <h2>Recent Bookings Requests</h2>
+
+            <table class="booking-table">
+
+                <thead>
+
+                <tr>
+
+                    <th>Name</th>
+
+                    <th>Vehicle</th>
+
+                    <th>Service</th>
+
+                    <th>Status</th>
+
+                </tr>
+
+                </thead>
+
+                <tbody>
+
+                {% for booking in recent_bookings %}
+
+                <tr>
+
+                    <td>
+
+                        {{ booking.full_name }}
+
+                    </td>
+
+                    <td>
+
+                        {{ booking.vehicle_make }}
+                        {{ booking.vehicle_model }}
+
+                    </td>
+
+                    <td>
+
+                        {{ booking.service_required }}
+
+                    </td>
+
+                    <td>
+
+                        {{ booking.status }}
+
+                    </td>
+
+                </tr>
+
+                {% empty %}
+
+                <tr>
+
+                    <td colspan="4">
+
+                        No bookings yet.
+
+                    </td>
+
+                </tr>
+
+                {% endfor %}
+
+                </tbody>
+
+            </table>
+
+           </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+</body>
+
+</html>

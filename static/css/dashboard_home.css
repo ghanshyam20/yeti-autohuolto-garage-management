@@ -1,0 +1,221 @@
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+body{
+
+    font-family:Arial,sans-serif;
+    background:#f5f7fb;
+    color:#222;
+
+}
+
+.dashboard{
+
+    display:flex;
+    min-height:100vh;
+
+}
+
+/* ======================
+   Sidebar
+====================== */
+
+.sidebar{
+
+    width:260px;
+
+    background:#1f2937;
+
+    color:white;
+
+    padding:30px 25px;
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.brand{
+
+    font-size:28px;
+
+    font-weight:bold;
+
+    margin-bottom:50px;
+
+}
+
+.brand-dark{
+
+    color:white;
+
+}
+
+.brand-orange{
+
+    color:#ff6b00;
+
+}
+
+.sidebar nav{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:10px;
+
+}
+
+.sidebar nav a{
+
+    color:#cbd5e1;
+
+    text-decoration:none;
+
+    padding:14px 18px;
+
+    border-radius:10px;
+
+    transition:.25s;
+
+}
+
+.sidebar nav a:hover{
+
+    background:#374151;
+
+    color:white;
+
+}
+
+.sidebar nav a.active{
+
+    background:#ff6b00;
+
+    color:white;
+
+}
+
+/* ======================
+   Main Content
+====================== */
+
+.content{
+
+    flex:1;
+
+    padding:40px;
+
+}
+
+
+/* ======================
+   Statistics
+====================== */
+
+.stats-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    gap:25px;
+
+    margin:35px 0;
+
+}
+
+.stat-card{
+
+    background:white;
+
+    border-radius:16px;
+
+    padding:28px;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.06);
+
+    transition:.25s;
+
+}
+
+.stat-card:hover{
+
+    transform:translateY(-4px);
+
+}
+
+.stat-card h2{
+
+    font-size:42px;
+
+    color:#ff6b00;
+
+    margin-bottom:10px;
+
+}
+
+.stat-card p{
+
+    color:#666;
+
+    font-size:16px;
+
+}
+
+/* ======================
+   Table
+====================== */
+
+.table-card{
+
+    background:white;
+
+    border-radius:18px;
+
+    padding:28px;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.06);
+
+}
+
+.booking-table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    margin-top:20px;
+
+}
+
+.booking-table th{
+
+    text-align:left;
+
+    padding:15px;
+
+    background:#f5f5f5;
+
+}
+
+.booking-table td{
+
+    padding:15px;
+
+    border-bottom:1px solid #eee;
+
+}
+
+.booking-table tr:hover{
+
+    background:#fafafa;
+
+}
