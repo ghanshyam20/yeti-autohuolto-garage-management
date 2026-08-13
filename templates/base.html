@@ -70,7 +70,8 @@
     <link rel="stylesheet" href="{% static 'css/cta.css' %}">
 
     <link rel="stylesheet" href="{% static 'css/about.css' %}">
-    <link rel="stylesheet" href="{% static 'css/contact_preview.css' %}">
+    <link rel="stylesheet" href="{% static 'css/booking.css' %}">
+    <link rel="stylesheet" href="{% static 'css/contact.css' %}">
 
       
 
@@ -90,7 +91,7 @@
 
             {% for message in messages %}
 
-                  <div class="alert alert-success alert-dismissible fade show">
+                  <div class="alert alert-{{ message.tags|default:'info' }} alert-dismissible fade show">
 
                         {{ message }}
 

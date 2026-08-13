@@ -12,6 +12,22 @@
 
                         {% csrf_token %}
 
+                        {% if form.errors %}
+                            <div class="alert alert-danger mb-4" role="alert">
+                                <strong>Please correct the following:</strong>
+                                <ul class="mb-0 mt-2">
+                                    {% for field in form %}
+                                        {% for error in field.errors %}
+                                            <li>{{ field.label }}: {{ error }}</li>
+                                        {% endfor %}
+                                    {% endfor %}
+                                    {% for error in form.non_field_errors %}
+                                        <li>{{ error }}</li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        {% endif %}
+
                         <div class="row g-4">
 
                             <!-- Customer -->
@@ -33,7 +49,8 @@
                                         name="full_name"
                                         class="form-control"
                                         placeholder="John Smith"
-                                        value="{{ form.full_name.value|default:'' }}">
+                                        value="{{ form.full_name.value|default:'' }}"
+                                        required>
                                     
                                 </div>
 
@@ -48,7 +65,8 @@
                                         name="phone_number"
                                         class="form-control"
                                         placeholder="+358..."
-                                        value="{{ form.phone_number.value|default:'' }}">
+                                        value="{{ form.phone_number.value|default:'' }}"
+                                        required>
                                 </div>
 
                                 <div>
@@ -61,7 +79,8 @@
                                         name="email"
                                         class="form-control"
                                         placeholder="name@email.com"
-                                        value="{{ form.email.value|default:'' }}">
+                                        value="{{ form.email.value|default:'' }}"
+                                        required>
                                 </div>
 
                             </div>
@@ -85,7 +104,8 @@
                                         name="vehicle_make"
                                         class="form-control"
                                         placeholder="Toyota"
-                                        value="{{ form.vehicle_make.value|default:'' }}">
+                                        value="{{ form.vehicle_make.value|default:'' }}"
+                                        required>
                                 </div>
 
                                 <div class="mb-3">
@@ -99,7 +119,8 @@
                                         name="vehicle_model"
                                         class="form-control"
                                         placeholder="Corolla"
-                                        value="{{ form.vehicle_model.value|default:'' }}">
+                                        value="{{ form.vehicle_model.value|default:'' }}"
+                                        required>
                                 </div>
 
                                 <div>
@@ -144,7 +165,8 @@
 
                             <select
                                 name="service_required"
-                                class="form-select">
+                                class="form-select"
+                                required>
 
                                 <option value="">
                                     Select a service
@@ -206,7 +228,9 @@
                                     type="date"
                                     name="preferred_date"
                                     class="form-control"
-                                    value="{{ form.preferred_date.value|default:'' }}">
+                                    min="{{ form.preferred_date.field.widget.attrs.min }}"
+                                    value="{{ form.preferred_date.value|default:'' }}"
+                                    required>
 
                             </div>
 
