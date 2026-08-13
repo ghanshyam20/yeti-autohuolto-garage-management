@@ -110,7 +110,15 @@
 
                     </h4>
 
-                    <form>
+                    <form method="POST" novalidate>
+
+                        {% csrf_token %}
+
+                        {% if form.errors %}
+                            <div class="alert alert-danger" role="alert">
+                                Please correct the highlighted fields below.
+                            </div>
+                        {% endif %}
 
                         <div class="mb-3">
 
@@ -122,8 +130,14 @@
 
                             <input
                                 type="text"
+                                name="full_name"
                                 class="form-control"
-                                placeholder="Your full name">
+                                placeholder="Your full name"
+                                value="{{ form.full_name.value|default:'' }}"
+                                required>
+                            {% for error in form.full_name.errors %}
+                                <div class="invalid-feedback d-block">{{ error }}</div>
+                            {% endfor %}
 
                         </div>
 
@@ -139,8 +153,13 @@
 
                                 <input
                                     type="tel"
+                                    name="phone_number"
                                     class="form-control"
-                                    placeholder="+358...">
+                                    placeholder="+358..."
+                                    value="{{ form.phone_number.value|default:'' }}">
+                                {% for error in form.phone_number.errors %}
+                                    <div class="invalid-feedback d-block">{{ error }}</div>
+                                {% endfor %}
 
                             </div>
 
@@ -154,8 +173,14 @@
 
                                 <input
                                     type="email"
+                                    name="email"
                                     class="form-control"
-                                    placeholder="name@email.com">
+                                    placeholder="name@email.com"
+                                    value="{{ form.email.value|default:'' }}"
+                                    required>
+                                {% for error in form.email.errors %}
+                                    <div class="invalid-feedback d-block">{{ error }}</div>
+                                {% endfor %}
 
                             </div>
 
@@ -171,8 +196,13 @@
 
                             <input
                                 type="text"
+                                name="subject"
                                 class="form-control"
-                                placeholder="How can we help?">
+                                placeholder="How can we help?"
+                                value="{{ form.subject.value|default:'' }}">
+                            {% for error in form.subject.errors %}
+                                <div class="invalid-feedback d-block">{{ error }}</div>
+                            {% endfor %}
 
                         </div>
 
@@ -185,9 +215,14 @@
                             </label>
 
                             <textarea
+                                name="message"
                                 rows="6"
                                 class="form-control"
-                                placeholder="Write your message here..."></textarea>
+                                placeholder="Write your message here..."
+                                required>{{ form.message.value|default:'' }}</textarea>
+                            {% for error in form.message.errors %}
+                                <div class="invalid-feedback d-block">{{ error }}</div>
+                            {% endfor %}
 
                         </div>
 

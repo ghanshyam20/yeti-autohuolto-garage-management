@@ -2,7 +2,7 @@
 
     <div class="container">
 
-        <a class="navbar-brand logo-text" href="/">
+        <a class="navbar-brand logo-text" href="{% url 'home' %}">
 
             YETI
             <span>AUTOHUOLTO</span>
@@ -27,25 +27,25 @@
 
                 <li class="nav-item">
 
-                    <a class="nav-link active" href="/">Home</a>
+                    <a class="nav-link active" href="{% url 'home' %}">Home</a>
 
                 </li>
 
                 <li class="nav-item">
 
-                    <a class="nav-link" href="/services/">Services</a>
+                    <a class="nav-link" href="{% url 'services' %}">Services</a>
 
                 </li>
 
                 <li class="nav-item">
 
-                    <a class="nav-link" href="/booking/">Booking</a>
+                    <a class="nav-link" href="{% url 'booking' %}">Booking</a>
 
                 </li>
 
                 <li class="nav-item">
 
-                    <a class="nav-link" href="/about/">About</a>
+                    <a class="nav-link" href="{% url 'about' %}">About</a>
 
                 </li>
 
@@ -53,7 +53,7 @@
 
                 <li class="nav-item">
 
-                    <a class="nav-link" href="/contact/">Contact</a>
+                    <a class="nav-link" href="{% url 'contact' %}">Contact</a>
 
                 </li>
 
@@ -62,7 +62,7 @@
             <div class="d-flex gap-2">
 
                 <a
-                    href="tel:+358000000000"
+                    href="tel:+358451566199"
                     class="btn btn-outline-dark">
 
                     <i class="bi bi-telephone"></i>
@@ -70,7 +70,7 @@
                 </a>
 
                 <a
-                    href="#"
+                    href="{% url 'booking' %}"
                     class="btn btn-warning">
 
                     Book Appointment

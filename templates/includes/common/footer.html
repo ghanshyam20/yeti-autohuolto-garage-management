@@ -18,15 +18,9 @@
                 </p>
 
                 <div class="footer-social">
-
-                    <a href="#"><i class="bi bi-facebook"></i></a>
-
-                    <a href="#"><i class="bi bi-instagram"></i></a>
-
-                    <a href="#"><i class="bi bi-linkedin"></i></a>
-
-                    <a href="#"><i class="bi bi-whatsapp"></i></a>
-
+                    <a href="https://wa.me/358451566199" aria-label="WhatsApp">
+                        <i class="bi bi-whatsapp"></i>
+                    </a>
                 </div>
 
             </div>
@@ -39,15 +33,15 @@
 
                 <ul class="footer-links">
 
-                    <li><a href="/">Home</a></li>
+                    <li><a href="{% url 'home' %}">Home</a></li>
 
-                    <li><a href="#">Services</a></li>
+                    <li><a href="{% url 'services' %}">Services</a></li>
 
-                    <li><a href="#">Booking</a></li>
+                    <li><a href="{% url 'booking' %}">Booking</a></li>
 
                  
 
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="{% url 'contact' %}">Contact</a></li>
 
                 </ul>
 
@@ -87,13 +81,13 @@
 
                 </ul>
 
-                <a href="#"
+                <a href="https://www.google.com/maps/search/?api=1&amp;query=Pikkukouluntie+4%2C+02770+Espoo"
                 class="footer-map-link"
                 target="_blank">
 
                 📍 View on Google Maps
 
-                <a>
+                </a>
 
 
 

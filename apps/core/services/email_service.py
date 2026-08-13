@@ -1,4 +1,4 @@
-from django.core.mail import send_mail
+from django.core.mail import EmailMessage, send_mail
 from django.conf import settings
 
 
@@ -59,7 +59,7 @@ def notify_garage_owner(booking):
     Send notification email to garage owner.
     """
 
-    subject = f"🚗 New Booking Request - {booking.full_name}"
+    subject = f"New Booking Request - {booking.full_name}"
 
     message = f"""
 A new booking request has been received.
@@ -118,10 +118,10 @@ Please log into the dashboard to review this booking.
 Yeti Autohuolto
 """
 
-    send_mail(
+    EmailMessage(
         subject=subject,
-        message=message,
+        body=message,
         from_email=settings.DEFAULT_FROM_EMAIL,
-        recipient_list=[settings.GARAGE_OWNER_EMAIL],
-        fail_silently=False,
-    )
+        to=[settings.GARAGE_OWNER_EMAIL],
+        reply_to=[booking.email],
+    ).send(fail_silently=False)

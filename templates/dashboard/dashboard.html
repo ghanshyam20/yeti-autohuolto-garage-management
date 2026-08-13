@@ -35,24 +35,24 @@
 
         <nav>
 
-            <a href="#" class="active">
+            <a href="{% url 'dashboard' %}" class="active">
                 Dashboard
             </a>
 
-            <a href="#">
+            <a href="{% url 'admin:core_booking_changelist' %}">
                 Bookings
             </a>
 
-            <a href="#">
-                Calendar
+            <a href="{% url 'booking' %}">
+                Public Booking Page
             </a>
 
-            <a href="#">
-                Customers
+            <a href="{% url 'home' %}">
+                View Website
             </a>
 
-            <a href="#">
-                Settings
+            <a href="{% url 'owner_logout' %}">
+                Log Out
             </a>
 
         </nav>
@@ -157,13 +157,13 @@
 
                     <td>
 
-                        {{ booking.service_required }}
+                        {{ booking.get_service_required_display }}
 
                     </td>
 
                     <td>
 
-                        {{ booking.status }}
+                        {{ booking.get_status_display }}
 
                     </td>
 
