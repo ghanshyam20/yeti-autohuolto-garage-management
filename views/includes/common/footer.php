@@ -17,11 +17,35 @@
                     Reliable service, transparent pricing and customer-first care.
                 </p>
 
-                <div class="footer-social">
-                    <a href="https://wa.me/358451566199" aria-label="WhatsApp">
-                        <i class="bi bi-whatsapp"></i>
-                    </a>
-                </div>
+              <div class="footer-social">
+                <a href="REAL_FACEBOOK_URL"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook">
+                    <i class="bi bi-facebook"></i>
+                </a>
+
+                <a href="REAL_INSTAGRAM_URL"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram">
+                    <i class="bi bi-instagram"></i>
+                </a>
+
+                <a href="https://www.linkedin.com/in/ghanshyam2026/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn">
+                    <i class="bi bi-linkedin"></i>
+                </a>
+
+                <a href="https://wa.me/358451566199"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="WhatsApp">
+                    <i class="bi bi-whatsapp"></i>
+                </a>
+            </div>
 
             </div>
 
@@ -70,16 +94,31 @@
             <div class="col-lg-3">
 
                 <h5>Contact</h5>
-
                 <ul class="footer-info">
 
-                    <li>📍Pikkukouluntie 4,Mikkelä,02770 Espoo</li>
+    <li>
+        <a href="https://www.google.com/maps/search/?api=1&amp;query=Pikkukouluntie+4%2C+Mikkel%C3%A4%2C+02770+Espoo"
+           target="_blank"
+           rel="noopener noreferrer"
+           aria-label="Open Yeti Autohuolto location in Google Maps">
+            📍 Pikkukouluntie 4, Mikkelä, 02770 Espoo
+        </a>
+    </li>
 
-                    <li>📞 +358 45 1566199 </li>
+    <li>
+        <a href="tel:+358451566199" aria-label="Call Yeti Autohuolto">
+            📞 +358 45 156 6199
+        </a>
+    </li>
 
-                    <li>✉ info@yetiautohuolto.fi</li>
+    <li>
+        <a href="mailto:info@yetiautohuolto.fi" aria-label="Email Yeti Autohuolto">
+            ✉ info@yetiautohuolto.fi
+        </a>
+    </li>
 
-                </ul>
+</ul>
+
 
                 <a href="https://www.google.com/maps/search/?api=1&amp;query=Pikkukouluntie+4%2C+02770+Espoo"
                 class="footer-map-link"
@@ -100,7 +139,7 @@
 
         <div class="footer-bottom">
 
-            © 2026 Yeti Autohuolto. All Rights Reserved.
+            © 2026 GhanShyam Bhattarai. All Rights Reserved.
 
         </div>
 
