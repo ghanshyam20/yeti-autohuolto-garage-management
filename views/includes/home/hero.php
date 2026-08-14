@@ -1,0 +1,62 @@
+<div class="container">
+
+    <div class="row align-items-center hero-row">
+
+        <div class="col-lg-6">
+
+            <span class="hero-badge">
+                Reliable Auto Repair & Maintenance
+            </span>
+
+            <h1 class="hero-title">
+                Professional Vehicle Service
+                for Every Journey
+            </h1>
+
+            <p class="hero-description">
+                From routine maintenance and diagnostics to repairs,
+                we provide dependable automotive care with transparent
+                pricing and attention to detail.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="<?= e(url('/booking/')) ?>" class="btn btn-primary">
+                    Book Service
+                </a>
+
+                <a href="tel:+358451566199" class="btn btn-outline-dark">
+                    Call Us
+                </a>
+
+            </div>
+
+            <div class="hero-features">
+
+                <span>✓ Transparent Pricing</span>
+                <span>✓ Fast Service</span>
+                <span>✓ Professional Technicians</span>
+
+            </div>
+
+        </div>
+
+        <div class="col-lg-6">
+
+            <div class="hero-image-container">
+
+                
+
+                <img
+                    src="<?= e(asset('images/hero/garage.jpg')) ?>"
+                    class="img-fluid hero-image"
+                    alt="Garage">
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
