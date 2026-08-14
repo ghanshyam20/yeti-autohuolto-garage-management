@@ -12,7 +12,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 
-    <?php foreach (['base', 'navbar', 'footer', 'home', 'buttons', 'forms', 'chatbot', 'responsive', 'utilities', 'services', 'cta', 'about', 'booking', 'contact'] as $stylesheet): ?>
+    <?php foreach ([ 'buttons', 'navbar', 'home', 'services', 'about', 'booking', 'contact', 'footer', 'responsive'] as $stylesheet): ?>
         <link rel="stylesheet" href="<?= e(asset('css/' . $stylesheet . '.css')) ?>">
     <?php endforeach; ?>
 </head>

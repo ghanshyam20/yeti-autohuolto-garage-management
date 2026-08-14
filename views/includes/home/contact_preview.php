@@ -36,7 +36,12 @@
 
                                 <strong>Phone</strong>
 
-                                <p>+358 45 156 6199</p>
+                               <p>
+                                    <a href="tel:+358451566199">
+                                        +358 45 156 6199
+                                    </a>
+
+                                </p>
 
                             </div>
 
@@ -50,7 +55,11 @@
 
                                 <strong>Email</strong>
 
-                                <p>info@yetiautohuolto.fi</p>
+                                <p>
+                                    <a href="mailto:info@yetiautohuolto.fi">
+                                        info@yetiautohuolto.fi
+                                    </a>
+                                </p>
 
                             </div>
 
@@ -64,7 +73,13 @@
 
                                 <strong>Location</strong>
 
-                                <p>Pikkukouluntie 4, Mikkelä, 02770 Espoo</p>
+                           <p>
+                                <a href="https://www.google.com/maps/search/?api=1&amp;query=Pikkukouluntie+4%2C+Mikkel%C3%A4%2C+02770+Espoo"
+                                target="_blank"
+                                rel="noopener noreferrer">
+                                    Pikkukouluntie 4, Mikkelä, 02770 Espoo
+                                </a>
+                            </p>
 
                             </div>
 

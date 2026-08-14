@@ -1,45 +1,219 @@
-body{
-    font-family:'Poppins',sans-serif;
+body {
+    font-family: 'Poppins', sans-serif;
 }
 
-.custom-navbar{
-    background:#ffffff;
-    box-shadow:0 2px 10px rgba(0,0,0,.08);
-    padding:15px 0;
-    transition: 35s;
+/* =========================
+   NAVBAR
+========================= */
+
+.custom-navbar {
+    position: relative;
+    z-index: 1030;
+    background: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    padding: 15px 0;
+    transition:
+        padding 0.35s ease,
+        box-shadow 0.35s ease;
 }
 
-.logo-text{
-    font-size:1.7rem;
-    font-weight:700;
-    color:#0F172A;
-    text-decoration:none;
+.logo-text {
+    color: #0f172a;
+    font-size: 1.7rem;
+    font-weight: 700;
+    line-height: 1.2;
+    text-decoration: none;
+    white-space: nowrap;
 }
 
-.logo-text span{
-    color:#F97316;
+.logo-text:hover,
+.logo-text:focus {
+    color: #0f172a;
 }
 
-.navbar-nav .nav-link{
-    color:#1F2937;
-    font-weight:500;
-    margin:0 12px;
-    transition:.3s;
+.logo-text span {
+    color: #f97316;
 }
 
-.navbar-nav .nav-link:hover{
-    color:#F97316;
+/* Navigation links */
+
+.navbar-nav .nav-link {
+    color: #1f2937;
+    font-weight: 500;
+    margin: 0 12px;
+    transition:
+        color 0.3s ease,
+        background-color 0.3s ease;
 }
 
-.navbar-nav .active{
-    color:#F97316 !important;
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus-visible {
+    color: #f97316;
 }
 
-.btn-warning{
-    background:#F97316;
-    border:none;
+.navbar-nav .nav-link.active {
+    color: #f97316 !important;
 }
 
-.btn-warning:hover{
-    background:#ea580c;
+/* Toggle button */
+
+.navbar-toggler {
+    width: 46px;
+    height: 46px;
+    padding: 8px;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    box-shadow: none;
+}
+
+.navbar-toggler:focus {
+    border-color: #f97316;
+    box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.18);
+}
+
+/* Appointment button */
+
+.custom-navbar .btn-warning {
+    color: #111827;
+    background: #f97316;
+    border-color: #f97316;
+}
+
+.custom-navbar .btn-warning:hover,
+.custom-navbar .btn-warning:focus-visible {
+    color: #111827;
+    background: #ea580c;
+    border-color: #ea580c;
+}
+
+/* =========================
+   TABLET AND MOBILE
+========================= */
+
+@media (max-width: 991.98px) {
+    .custom-navbar {
+        padding: 10px 0;
+    }
+
+    .custom-navbar .container {
+        padding-right: 16px;
+        padding-left: 16px;
+    }
+
+    .logo-text {
+        font-size: clamp(1.15rem, 4.5vw, 1.5rem);
+    }
+
+    .navbar-collapse {
+        max-height: calc(100dvh - 72px);
+        margin-top: 10px;
+        padding: 14px 0 8px;
+        overflow-y: auto;
+        border-top: 1px solid #e5e7eb;
+    }
+
+    .navbar-nav {
+        width: 100%;
+    }
+
+    .navbar-nav .nav-item {
+        width: 100%;
+    }
+
+    .navbar-nav .nav-link {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        min-height: 48px;
+        margin: 2px 0;
+        padding: 11px 14px;
+        border-radius: 9px;
+    }
+
+    .navbar-nav .nav-link:hover,
+    .navbar-nav .nav-link:focus-visible {
+        color: #f97316;
+        background: #fff7ed;
+    }
+
+    .navbar-nav .nav-link.active {
+        color: #f97316 !important;
+        background: #fff7ed;
+    }
+
+    /* Call and booking buttons */
+
+    .navbar-collapse > .d-flex {
+        display: grid !important;
+        grid-template-columns: 50px minmax(0, 1fr);
+        width: 100%;
+        margin-top: 12px;
+        padding-top: 14px;
+        gap: 10px !important;
+        border-top: 1px solid #e5e7eb;
+    }
+
+    .navbar-collapse > .d-flex .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 48px;
+        margin: 0;
+        border-radius: 9px;
+        font-weight: 500;
+    }
+
+    .navbar-collapse > .d-flex .btn-outline-dark {
+        width: 50px;
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    .navbar-collapse > .d-flex .btn-warning {
+        width: 100%;
+        white-space: normal;
+    }
+}
+
+/* =========================
+   SMALL PHONES
+========================= */
+
+@media (max-width: 575.98px) {
+    .custom-navbar .container {
+        padding-right: 14px;
+        padding-left: 14px;
+    }
+
+    .logo-text {
+        font-size: clamp(1.05rem, 5vw, 1.3rem);
+    }
+
+    .navbar-toggler {
+        width: 44px;
+        height: 44px;
+    }
+
+    .navbar-collapse > .d-flex {
+        grid-template-columns: 48px minmax(0, 1fr);
+    }
+
+    .navbar-collapse > .d-flex .btn {
+        min-height: 46px;
+        font-size: 0.9rem;
+    }
+
+    .navbar-collapse > .d-flex .btn-outline-dark {
+        width: 48px;
+    }
+}
+
+/* Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+    .custom-navbar,
+    .navbar-nav .nav-link,
+    .custom-navbar .btn {
+        transition: none;
+    }
 }

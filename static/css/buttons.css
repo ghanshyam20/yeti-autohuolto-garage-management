@@ -1,36 +1,99 @@
-/* .btn{
+/* =========================
+   SHARED BUTTONS
+========================= */
 
-transition:.35s;
+.btn {
+    touch-action: manipulation;
+    transition:
+        color 0.3s ease,
+        background-color 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease,
+        transform 0.3s ease;
 }
 
-.btn:hover{
+/* Apply hover movement only on devices with a real mouse */
 
-transform:translateY(-3px);
-
-box-shadow:0 15px 35px rgba(0,0,0,.15);
-
-}
- */
-
-
- .btn{
-    transition:.3s;
+@media (hover: hover) and (pointer: fine) {
+    .btn:not(:disabled):not(.disabled):hover {
+        transform: translateY(-2px);
+    }
 }
 
-.btn:hover{
-    transform:translateY(-2px);
+.btn:active {
+    transform: translateY(0);
 }
 
-.btn-primary-custom{
-    background:#F97316;
-    color:#fff;
-    border:none;
-    border-radius:10px;
-    padding:12px 28px;
-    font-weight:600;
+.btn:focus-visible {
+    outline: 3px solid rgba(249, 115, 22, 0.35);
+    outline-offset: 3px;
 }
 
-.btn-primary-custom:hover{
-    background:#ea670c;
-    color:#fff;
+.btn:disabled,
+.btn.disabled {
+    transform: none;
+    cursor: not-allowed;
+}
+
+/* =========================
+   CUSTOM ORANGE BUTTON
+========================= */
+
+.btn-primary-custom {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding: 12px 28px;
+    color: #ffffff;
+    background: #f97316;
+    border: 1px solid #f97316;
+    border-radius: 10px;
+    font-weight: 600;
+    line-height: 1.4;
+    text-align: center;
+    text-decoration: none;
+    white-space: normal;
+}
+
+.btn-primary-custom:hover,
+.btn-primary-custom:focus-visible {
+    color: #ffffff;
+    background: #ea580c;
+    border-color: #ea580c;
+}
+
+.btn-primary-custom:active {
+    color: #ffffff;
+    background: #c2410c;
+    border-color: #c2410c;
+}
+
+/* =========================
+   MOBILE TOUCH TARGETS
+========================= */
+
+@media (max-width: 991.98px) {
+    .btn {
+        min-height: 44px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .btn-primary-custom {
+        min-height: 50px;
+        padding: 12px 20px;
+    }
+}
+
+/* Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+    .btn {
+        transition: none;
+    }
+
+    .btn:hover {
+        transform: none;
+    }
 }
